@@ -84,7 +84,7 @@ export const IntroScene: React.FC<IntroSceneProps> = ({
         <circle cx="700" cy="700" r="380" fill="none" stroke={theme.hyundaiBlue} strokeWidth="0.5" strokeDasharray="6 20" />
       </svg>
 
-      {/* Company name — split into two lines for Hyundai Motor America */}
+      {/* Company name */}
       <div
         style={{
           opacity: logoOpacity,
@@ -137,7 +137,7 @@ export const IntroScene: React.FC<IntroSceneProps> = ({
         Sales Performance Dashboard
       </div>
 
-      {/* Hyundai tagline */}
+      {/* Tagline */}
       <div
         style={{
           marginTop: 64,

@@ -33,7 +33,7 @@ function generateRegions(): RegionData[] {
 }
 
 const data: LobbyData = {
-  company_name: "Hyundai Motor America",
+  company_name: "Automotive America",
   tagline: "New Thinking. New Possibilities.",
   kpis: [
     {

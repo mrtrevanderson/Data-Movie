@@ -2,11 +2,11 @@ export const theme = {
   // Colors
   bg: "#070B14",
   bgAlt: "#0C1220",
-  // Hyundai brand colors
-  hyundaiBlue: "#002C5F",      // Hyundai primary blue
+  // Brand colors
+  hyundaiBlue: "#002C5F",      // primary dark blue
   hyundaiBlueBright: "#0066CC", // lighter blue for glow/UI
   accentSilver: "#C8D0D8",     // metallic silver
-  // Keep accent aliases pointing to Hyundai palette
+  // Keep accent aliases pointing to brand palette
   accent: "#0066CC",
   accentGold: "#FFB800",
   accentGreen: "#00C896",

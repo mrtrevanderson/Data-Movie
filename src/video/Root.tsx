@@ -4,7 +4,7 @@ import { LobbyVideo, LobbyVideoProps } from "./LobbyVideo";
 import { LobbyData } from "../data/types";
 
 const defaultData: LobbyData = {
-  company_name: "Hyundai Motor America",
+  company_name: "Automotive America",
   tagline: "New Thinking. New Possibilities.",
   kpis: [
     { label: "YTD Revenue",     value: 9_840_000_000, format: "currency" },

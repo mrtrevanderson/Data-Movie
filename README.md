@@ -1,4 +1,4 @@
-# Hyundai Motor America — Lobby Display Renderer
+# Automotive America — Lobby Display Renderer
 
 An automated **4K motion infographic** that renders a polished 30-second looping video from a JSON data payload. Built with **Node.js + TypeScript + Remotion**.
 
@@ -114,13 +114,13 @@ The system is a three-stage pipeline that runs every time you call `npm run run-
 
 ### Stage 1 — Data Fetch (`src/data/fetchData.ts`)
 
-This script simulates a live warehouse or API query. In production you would replace the body of this file with a real database call, REST API request, or BI tool export. For the POC it generates randomized but realistic Hyundai automotive values and writes them to `data.json` at the project root.
+This script simulates a live warehouse or API query. In production you would replace the body of this file with a real database call, REST API request, or BI tool export. For the POC it generates randomized but realistic automotive values and writes them to `data.json` at the project root.
 
 **What it produces (`data.json`):**
 
 ```json
 {
-  "company_name": "Hyundai Motor America",
+  "company_name": "Automotive America",
   "tagline": "New Thinking. New Possibilities.",
   "kpis": [
     { "label": "YTD Revenue",   "value": 9840000000, "format": "currency" },
@@ -192,7 +192,7 @@ frame 24 → opacity: 1.0, translateY: 0px   (title fully visible)
 The main composition divides the 900 frames into five scenes using Remotion's `<Sequence>` component. Each `<Sequence from={N}>` resets `useCurrentFrame()` to zero at frame N, so every scene's internal animations are relative to when that scene starts.
 
 ```
-Frame  0  → 180   (6 s)   IntroScene      — Hyundai title, tagline, decorative rings
+Frame  0  → 180   (6 s)   IntroScene      — company title, tagline, decorative rings
 Frame 150 → 390   (8 s)   KPIScene        — 3 metric cards counting up
 Frame 360 → 600   (8 s)   TrendScene      — Monthly sales line chart drawing left to right
 Frame 570 → 810   (8 s)   USRegionScene   — US map + regional bar chart
@@ -203,7 +203,7 @@ Scenes overlap by 30 frames (1 second) at each transition. During this overlap w
 
 ### Seamless Loop
 
-The Outro scene is visually identical to the Intro scene (same background gradient, grid, decorative rings, typography, and Hyundai blue color palette). In the final 2.5 seconds of the Outro, a matching overlay fades in on top, bringing the frame back to the exact starting visual state. When the video loops, frame 900 and frame 0 are indistinguishable.
+The Outro scene is visually identical to the Intro scene (same background gradient, grid, decorative rings, typography, and brand color palette). In the final 2.5 seconds of the Outro, a matching overlay fades in on top, bringing the frame back to the exact starting visual state. When the video loops, frame 900 and frame 0 are indistinguishable.
 
 ---
 
@@ -213,7 +213,7 @@ The Outro scene is visually identical to the Intro scene (same background gradie
 - Dark radial gradient background with a subtle dot grid and two dashed decorative rings
 - Company name slides up and fades in
 - A horizontal gradient accent line scales in from center
-- Tagline (*"New Thinking. New Possibilities."*) fades in last in Hyundai blue
+- Tagline (*"New Thinking. New Possibilities."*) fades in last in brand blue
 
 ### KPIScene
 - Three cards appear with staggered slide-up animations
@@ -253,7 +253,7 @@ data-movie/
 │   │   ├── LobbyVideo.tsx            # Main composition — scene sequencing and crossfades
 │   │   ├── theme.ts                  # All design tokens: colors, fonts, sizes, spacing
 │   │   ├── scenes/
-│   │   │   ├── IntroScene.tsx        # Hyundai title + tagline (0–6 s)
+│   │   │   ├── IntroScene.tsx        # company title + tagline (0–6 s)
 │   │   │   ├── KPIScene.tsx          # 3 KPI cards with count-up (5–14 s)
 │   │   │   ├── TrendScene.tsx        # Animated line chart (12–20 s)
 │   │   │   ├── USRegionScene.tsx     # Real SVG US map + bar chart (19–27 s)
@@ -301,7 +301,7 @@ npm run studio
 Edit `src/data/fetchData.ts`. The `data` object near the bottom of the file sets all values. Replace the random generators with real API calls to connect live data.
 
 ### Change colors or fonts
-Edit `src/video/theme.ts`. All scenes and components import from this single file. The Hyundai brand colors are:
+Edit `src/video/theme.ts`. All scenes and components import from this single file. The brand colors are:
 - `hyundaiBlue` — `#002C5F` (primary dark blue, used for backgrounds and glows)
 - `hyundaiBlueBright` — `#0066CC` (bright blue, used for accents and highlights)
 - `accentSilver` — `#C8D0D8` (metallic silver, used for secondary lines)
