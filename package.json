@@ -1,0 +1,24 @@
+{
+  "name": "lobby-display",
+  "version": "1.0.0",
+  "description": "Automated lobby display motion infographic renderer",
+  "scripts": {
+    "data": "ts-node src/data/fetchData.ts",
+    "render": "ts-node scripts/render.ts",
+    "run-all": "ts-node scripts/run-all.ts",
+    "studio": "remotion studio src/video/index.ts"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.291",
+    "@remotion/cli": "4.0.291",
+    "@remotion/renderer": "4.0.291",
+    "remotion": "4.0.291"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
